@@ -111,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (isset($_POST['action']) && $_POST['action'] === 'aqi') {
-        $aqiApiUrl = "https://data.moenv.gov.tw/api/v2/aqx_p_432?api_key=0645612e-c67b-48b3-9428-fe741b582531&limit=1000&sort=ImportDate%20desc&format=JSON";
+        $aqiApiUrl = "https://data.moenv.gov.tw/api/v2/aqx_p_432?api_key=YOUR_CWA_API_KEY&limit=1000&sort=ImportDate%20desc&format=JSON";
         
         $jsonContent = @file_get_contents($aqiApiUrl, false, $context);
         
@@ -229,3 +229,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </body>
 
 </html>
+
